@@ -28,6 +28,7 @@ public class gui {
     private JButton transforButton;
     private JButton helpbutton;
     private JButton tariningnetworkbutton;
+    private JButton drawLetterbutton;
     private JTextField trainingsetsamount;
     private JComboBox<String> drawletter;
     private JComboBox<String> trainingascombo;
@@ -63,10 +64,28 @@ public class gui {
 
     }
     private void setleftside(){
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.LIGHT_GRAY);
+        panel.setPreferredSize(new Dimension(410,440));
+
+        drawLetterbutton = new JButton("draw");
+        drawletter = new JComboBox<>(new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Z", "Y"});
+
+        drawingpanel = new draw(400, 400, RESOLUTION);
+
+        panel.add(drawLetterbutton);
+        panel.add(drawletter);
+        panel.add(drawingpanel);
+
+        mainPanel.add(panel);
 
 
     }
     private void setcentrearea(){
+        JPanel centerPanel = new JPanel();
+        centerPanel.setLayout(new GridBagLayout());
+        centerPanel.setPreferredSize(new Dimension(200,400));
+        GridBagConstraints
 
     }
     private void setrightside(){
